@@ -1,0 +1,4 @@
+select_type:
+Materialized subquery 被物化的子查询
+UNCACHEABLE SUBQUERY
+UNCACHEABLE UNION

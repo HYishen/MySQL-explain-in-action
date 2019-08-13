@@ -1,0 +1,7 @@
+utf-8 varchar not null长度公式：n*3+2
+utf-8 varchar default null长度公式：n*3+3
+utf-8 char not null长度公式：n*3
+utf-8 char default null长度公式：n*3 + 1
+
+datetime 长度为5
+int 长度为4

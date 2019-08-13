@@ -1,0 +1,11 @@
+慢查询日志
+show variables like '%query%';
+set long_query_time = 0;
+set global slow_query_log = 'ON';
+
+
+查询优化器配置
+show variables like 'optimizer_switch';
+
+在会话中关闭BNL
+SET SESSION optimizer_switch='block_nested_loop=off';
