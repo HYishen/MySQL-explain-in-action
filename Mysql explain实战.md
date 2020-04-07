@@ -45,7 +45,7 @@ select查询语句的执行序列号。当explain表的某一行代表union的�
 |DEPENDENT SUBQUERY|与dependent union类似，表示这个subquery的查询要受到外部表查询的影响|First SELECT in subquery, dependent on outer query|
 |DERIVED|from字句中出现的子查询|Derived table|
 |DEPENDENT DERIVED|与derived类似，并且这个查询依赖其他的表|Derived table dependent on another table|
-|MATERIALIZED|被物化的子查询|Materialized subquery|
+|MATERIALIZED|物化子查询。优化程序实体化以实现更高效的子查询的处理。 实例化通常通过在内存中生成子查询结果作为临时表来加快查询执行速度。 MySQL第一次需要子查询结果时，将其结果化为临时表。|Materialized subquery.The optimizer uses materialization to enable more efficient subquery processing. Materialization speeds up query execution by generating a subquery result as a temporary table, normally in memory. The first time MySQL needs the subquery result, it materializes that result into a temporary table.|
 |UNCACHEABLE SUBQUERY|对于外层的主表，子查询不可被物化，每次都需要计算（耗时操作）|A subquery for which the result cannot be cached and must be re-evaluated for each row of the outer query|
 |UNCACHEABLE UNION|UNION操作中，内层的不可被物化的子查询（类似于UNCACHEABLE SUBQUERY）|The second or later select in a UNION that belongs to an uncacheable subquery (see UNCACHEABLE SUBQUERY)|
 
